@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="contenedor-form">
+        <form id="formulario-servicio">
+            <fieldset>
+            <legend> Ingresa tus datos </legend>
+            <label> Nombre </label>
+            <input id="nombre" type="text">
+            <label> Numero de Telefono</label>
+            <input id="numero" type="tel">
+            <label> Tipo de Servicio </label>
+            <select id="servicio" >
+                <option value="Reparacion"> Reparacion </option>
+                <option value="Actualizacion de Componentes"> Actualizacion de Componentes </option>
+                <option value="Mantenimiento"> Mantenimiento </option>
+            </select>
+            <label> Modelo del equipo </label>
+            <input id="modelo" type="text">
+            <button id="boton-generar" type="button" onclick="generarSolicitud()"> Generar Solicitud </button>
+           
+            </fieldset> 
+        </form>
+    </div>
+    
+    <div id="contedor-solicitud-proxima">
+        <fieldset>
+            <legend>Siguiente Solicitud</legend>
+            <label>Turno: </label>
+            <input id="proximo-turno" type="text" disabled>
+            <label >Nombre: </label>
+            <input id="proximo-nombre" type="text" disabled>
+            <label>Telefono: </label>
+            <input id="proximo-telefono" type="text" disabled>
+            <label>Servicio: </label>
+            <input id="proximo-servicio" type="text" disabled>
+            <label>Modelo: </label>
+            <input id="proximo-modelo" type="text" disabled>
+            <button type="button" onclick="atenderSolicitud()"> Atender Solicitud </button>
+        </fieldset>
+       
+    </div>
+</body>
+</html>
